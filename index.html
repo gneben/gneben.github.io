@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <nav>
+        <a href="#skills">My Skills</a>
+        <a href="#projects">My Projects</a>
+    </nav>
+
+    <section class="hero visible">
+        <div class="container">
+            <h1>Introduction</h1>
+            <p>Diving into the world of web development with curiosity and determination! Currently exploring HTML, CSS, and JavaScript through online courses, YouTube tutorials, and hands-on experiments. Every bug I encounter teaches me something new, and every project brings a fresh wave of excitement.</p>
+            <p>My background in Python gave me a taste of programming logic and problem-solving. Now I'm applying those skills to create interactive web experiences, teaching myself through building projects and solidifying what I learn along the way.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>My Skills</h2>
+            <div class="skills-cols">
+                <div>
+                    <h3>Technical</h3>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Python</li>
+                        <li>Git</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Other</h3>
+                    <ul>
+                        <li>Continuous learning</li>
+                        <li>Focus and consistency</li>
+                        <li>Analytical thinking</li>
+                        <li>Growth mindset</li>
+                        <li>Communication</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="project-carousel" id="projectCarousel">
+                <div class="project-slide active">
+                    <div class="project-card">
+                        <h3>Currency price tracker</h3>
+                        <div class="project-card-meta">Python</div>
+                        <p>My first programming project built entirely from scratch with no prior coding experience. Used Tornado to manage multiple concurrent WebSocket connections and HTTPS requests. Streamed real-time cryptocurrency prices from Binance and forex rates from yfinance to convert prices across multiple currencies and compare those between different platforms. This project sparked my passion for programming.</p>
+                    </div>
+                </div>
+                <div class="project-slide">
+                    <div class="project-card">
+                        <h3>Portfolio</h3>
+                        <div class="project-card-meta">HTML, CSS, JavaScript</div>
+                        <p>This portfolio site, built with AI assistance to learn how HTML, CSS, and JavaScript work together in practice. Designed as a hands-on way to explore responsive layouts, theme switching, and scroll-based interactions while picking up frontend fundamentals along the way.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-nav" id="carouselDots"></div>
+        </div>
+    </section>
+
+    <button class="theme-btn" onclick="toggleTheme()" title="Toggle theme" id="themeBtn"></button>
+    <div class="top-indicator" id="topBtn" title="Back to top"></div>
+
+    <script src="js/theme.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/carousel.js"></script>
+</body>
+</html>

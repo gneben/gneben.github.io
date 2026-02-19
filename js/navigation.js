@@ -50,7 +50,15 @@ function positionTopBtn() {
     topBtn.style.top = navEl.offsetHeight + 15 + 'px';
 }
 positionTopBtn();
-addEventListener('resize', positionTopBtn);
+var resizeTimer;
+addEventListener('resize', function() {
+    positionTopBtn();
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+        updateActiveMenu();
+        topBtn.classList.toggle('show', scrollY > innerHeight * 0.5);
+    }, 50);
+});
 
 topBtn.addEventListener('click', function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });

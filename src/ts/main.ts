@@ -17,7 +17,13 @@ themeToggle.type = "button";
 themeToggle.setAttribute("aria-label", "Toggle color theme");
 
 const savedTheme = window.localStorage.getItem(themeStorageKey);
-const initialTheme = savedTheme === "light" ? "light" : "dark";
+const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+const initialTheme =
+  savedTheme === "light" || savedTheme === "dark"
+    ? savedTheme
+    : prefersLight
+      ? "light"
+      : "dark";
 
 applyTheme(initialTheme, themeToggle);
 document.body.appendChild(themeToggle);
